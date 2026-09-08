@@ -1,0 +1,394 @@
+/* ==========================================================================
+   Dream Italia UniPathways — Custom Styles
+   Dynamic variables, typography, GSAP-driven states
+   ========================================================================== */
+
+:root {
+  --color-bg: #080C14;
+  --color-bg-elev: #0D1420;
+  --color-white: #FFFFFF;
+  --color-slate: #94A3B8;
+  --color-emerald: #059669;
+  --color-crimson: #DC2626;
+  --color-gold: #D97706;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+html {
+  background: var(--color-bg);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-white);
+  font-family: 'Manrope', sans-serif;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Lenis smooth scroll requirements */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth scroll-behavior: auto;
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Glassmorphism
+   ========================================================================== */
+.glass {
+  background: rgba(13, 20, 32, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-strong {
+  background: rgba(8, 12, 20, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   Gradient text / accents
+   ========================================================================== */
+.text-gradient-italia {
+  background: linear-gradient(90deg, #059669 0%, #D97706 50%, #DC2626 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-underline {
+  position: relative;
+}
+.gold-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 2px;
+  width: 48px;
+  background: var(--color-gold);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn-luxury {
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s ease;
+}
+.btn-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -8px rgba(217, 119, 6, 0.45);
+}
+
+.btn-glow-emerald:hover {
+  box-shadow: 0 12px 32px -8px rgba(5, 150, 105, 0.5);
+}
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+.card-hover {
+  transition: transform .45s cubic-bezier(.16,1,.3,1), border-color .45s ease, box-shadow .45s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(217, 119, 6, 0.4);
+  box-shadow: 0 24px 48px -16px rgba(0,0,0,0.6);
+}
+
+/* ==========================================================================
+   Hero background treatments
+   ========================================================================== */
+.hero-gradient-overlay {
+  background: linear-gradient(180deg, rgba(8,12,20,0.35) 0%, rgba(8,12,20,0.65) 55%, rgba(8,12,20,0.98) 100%);
+}
+
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ==========================================================================
+   Nav
+   ========================================================================== */
+#global-header {
+  transition: background .4s ease, border-color .4s ease, padding .4s ease;
+}
+#global-header.scrolled {
+  background: rgba(8, 12, 20, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 1px;
+  background: var(--color-gold);
+  transition: width .3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* ==========================================================================
+   Floating WhatsApp
+   ========================================================================== */
+.whatsapp-float {
+  animation: whatsapp-pulse 2.6s infinite;
+}
+@keyframes whatsapp-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ==========================================================================
+   Form inputs
+   ========================================================================== */
+.input-luxury {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: border-color .3s ease, background .3s ease, box-shadow .3s ease;
+}
+.input-luxury:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+.input-luxury::placeholder {
+  color: rgba(148, 163, 184, 0.6);
+}
+
+/* ==========================================================================
+   Timeline / Roadmap
+   ========================================================================== */
+.roadmap-line {
+  background: linear-gradient(180deg, rgba(217,119,6,0) 0%, rgba(217,119,6,0.8) 15%, rgba(5,150,105,0.8) 85%, rgba(5,150,105,0) 100%);
+}
+
+@media (min-width: 768px) {
+  .roadmap-line-h {
+    background: linear-gradient(90deg, rgba(217,119,6,0) 0%, rgba(217,119,6,0.8) 10%, rgba(5,150,105,0.8) 90%, rgba(5,150,105,0) 100%);
+  }
+}
+
+/* ==========================================================================
+   Scrollbar
+   ========================================================================== */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #080C14; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #D97706; }
+
+/* Reveal utility, animated via GSAP.
+   Visible by default (progressive enhancement) — main.js adds
+   .reveal-init only once GSAP/ScrollTrigger are confirmed loaded,
+   so content never gets stuck invisible if a CDN script fails. */
+.reveal-up.reveal-init { opacity: 0; transform: translateY(40px); }
+
+/* ==========================================================================
+   Testimonials — themed Swiper pagination + card accent
+   ========================================================================== */
+.testimonials-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background: rgba(255, 255, 255, 0.16);
+  opacity: 1;
+  border-radius: 9999px;
+  transition: width .3s ease, background .3s ease;
+}
+.testimonials-pagination .swiper-pagination-bullet-active {
+  width: 26px;
+  background: linear-gradient(90deg, var(--color-emerald), var(--color-gold));
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(217,119,6,0.35), rgba(5,150,105,0.35));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+}
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+/* Marquee for university logos */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   Scroll progress bar
+   ========================================================================== */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-emerald), var(--color-gold), var(--color-crimson));
+  z-index: 60;
+  transition: width .1s linear;
+}
+
+/* ==========================================================================
+   Spotlight cursor-glow on cards
+   Uses --mx/--my set via JS pointermove; falls back gracefully with no JS.
+   ========================================================================== */
+.spotlight-card {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), rgba(217, 119, 6, 0.16), transparent 70%);
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.spotlight-card:hover::after {
+  opacity: 1;
+}
+.spotlight-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   Image zoom-on-hover treatment
+   Wrap an <img> in .img-zoom-wrap (overflow-hidden) to enable.
+   ========================================================================== */
+.img-zoom-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.img-zoom-wrap img {
+  transition: transform .7s cubic-bezier(.16,1,.3,1), filter .7s ease;
+  will-change: transform;
+}
+.img-zoom-wrap:hover img {
+  transform: scale(1.08);
+  filter: saturate(1.15) brightness(1.03);
+}
+.img-zoom-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8,12,20,0) 40%, rgba(8,12,20,0.92) 100%);
+  transition: opacity .4s ease;
+}
+
+/* ==========================================================================
+   Button shine sweep
+   ========================================================================== */
+.btn-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255,255,255,0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left .75s ease;
+  pointer-events: none;
+}
+.btn-shine:hover::before {
+  left: 130%;
+}
+
+/* ==========================================================================
+   Icon micro-interactions
+   ========================================================================== */
+.icon-pop {
+  transition: transform .45s cubic-bezier(.34,1.56,.64,1), background-color .35s ease, border-color .35s ease;
+}
+.card-hover:hover .icon-pop,
+.spotlight-card:hover .icon-pop {
+  transform: scale(1.12) rotate(-6deg);
+}
+
+/* ==========================================================================
+   Link arrow nudge (used on CTA text links with a trailing arrow svg)
+   ========================================================================== */
+.arrow-nudge svg {
+  transition: transform .35s cubic-bezier(.16,1,.3,1);
+}
+.arrow-nudge:hover svg {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Tilt wrapper (subtle 3D tilt via JS-set CSS vars --rx/--ry)
+   ========================================================================== */
+.tilt-card {
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform .25s ease-out;
+  transform-style: preserve-3d;
+}
+.tilt-card:not(:hover) {
+  transition: transform .5s cubic-bezier(.16,1,.3,1);
+}
+
+/* ==========================================================================
+   Fade-in page load
+   ========================================================================== */
+body.page-ready {
+  animation: page-fade-in .6s ease both;
+}
+@keyframes page-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==========================================================================
+   Reduced motion — disable non-essential animation/transition for users
+   who request it, without hiding content (accessibility)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .tilt-card {
+    transform: none !important;
+  }
+}

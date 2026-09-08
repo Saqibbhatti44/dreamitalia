@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dream Italia UniPathways | Tuition-Free Higher Education in Italy</title>
+<meta name="description" content="Complete guidance for admissions, government scholarships (DSU/EDISU), and study visas for Pakistani students seeking tuition-free education in Italy.">
+
+<!-- Tailwind CDN + Custom Config -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          obsidian: '#080C14',
+          slateaccent: '#94A3B8',
+          italgreen: '#059669',
+          italred: '#DC2626',
+          luxgold: '#D97706',
+        },
+        fontFamily: {
+          display: ['Playfair Display', 'serif'],
+          sans: ['Manrope', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<!-- Favicon -->
+<link rel="icon" href="assets/images/branding/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/images/branding/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/images/branding/favicon-180.png">
+</head>
+<body class="bg-obsidian antialiased">
+<div id="scroll-progress"></div>
+
+<!-- ==========================================================================
+     COMPONENT: Global Header (see includes/global-header.html)
+     ========================================================================== -->
+<header id="global-header" class="fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex items-center justify-between h-20 lg:h-24">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/branding/logo.png" alt="Dream Italia UniPathways" class="h-11 w-11 rounded-full object-cover shadow-lg shadow-black/40">
+        <span class="flex flex-col leading-none">
+          <span class="font-display text-lg lg:text-xl font-semibold tracking-wide text-white">Dream Italia</span>
+          <span class="text-[10px] lg:text-xs uppercase tracking-[0.25em] text-amber-500">UniPathways</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-10">
+        <a data-nav-link href="index.html" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">Home</a>
+        <a data-nav-link href="services.html" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">Services</a>
+        <a data-nav-link href="about.html" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">About Us</a>
+        <a data-nav-link href="contact.html" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="contact.html" class="btn-luxury btn-shine arrow-nudge hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-900/30">
+          Free Assessment
+        </a>
+        <button id="mobile-menu-btn" aria-label="Toggle menu" class="lg:hidden flex items-center justify-center h-10 w-10 rounded-full glass text-white">
+          <svg id="icon-menu-open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          <svg id="icon-menu-close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden flex-col gap-1 glass-strong mx-4 mb-4 rounded-2xl px-6 py-6">
+    <a data-nav-link href="index.html" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">Home</a>
+    <a data-nav-link href="services.html" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">Services</a>
+    <a data-nav-link href="about.html" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">About Us</a>
+    <a data-nav-link href="contact.html" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">Contact</a>
+    <a href="contact.html" class="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-6 py-3 text-sm font-semibold text-white">Free Assessment</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ==========================================================================
+     SECTION: Hero — Cinematic
+     ========================================================================== -->
+<section class="relative min-h-screen flex items-center overflow-hidden" data-parallax-wrap>
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?q=80&w=2400&auto=format&fit=crop"
+      alt="Iconic Italian university architecture at golden hour"
+      class="w-full h-[130%] object-cover -mt-[10%]"
+      data-parallax="0.15"
+    >
+    <div class="absolute inset-0 hero-gradient-overlay"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20 w-full">
+    <div class="max-w-3xl">
+      <span class="hero-eyebrow inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-amber-500 mb-8">
+        Study in Italy &middot; Tuition-Free
+      </span>
+      <h1 class="hero-headline font-display text-4xl sm:text-5xl lg:text-7xl font-semibold leading-[1.05] text-white">
+        Your Bridge to <span class="text-gradient-italia">Tuition-Free</span> Higher Education in Italy.
+      </h1>
+      <p class="hero-subheadline mt-8 text-lg lg:text-xl text-slate-300 max-w-2xl leading-relaxed">
+        Complete guidance for admissions, government scholarships (DSU/EDISU), and study visas — built exclusively for ambitious Pakistani students.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="contact.html" class="hero-cta btn-luxury btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-8 py-4 text-sm font-semibold text-white w-full sm:w-auto">
+          Check Eligibility
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        </a>
+        <a href="https://wa.me/393508836325" target="_blank" rel="noopener" class="hero-cta btn-luxury btn-glow-emerald inline-flex items-center justify-center gap-2 rounded-full glass px-8 py-4 text-sm font-semibold text-white w-full sm:w-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.766.463 3.484 1.34 4.997L2 22l5.146-1.35A9.958 9.958 0 0012.004 22c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.15a8.13 8.13 0 01-4.146-1.14l-.297-.176-3.055.801.816-2.977-.194-.306a8.14 8.14 0 01-1.276-4.352c0-4.501 3.664-8.165 8.165-8.165s8.165 3.664 8.165 8.165-3.664 8.15-8.174 8.15z"/></svg>
+          +39 350 883 6325
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-slate-400 animate-bounce">
+    <span class="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION: Trust Counter Bar
+     ========================================================================== -->
+<section class="relative border-y border-white/5 bg-[#0A0F1A]">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-14">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 reveal-stagger">
+
+      <div class="reveal-up text-center lg:border-r border-white/5">
+        <p class="font-display text-4xl lg:text-5xl font-bold text-white"><span data-counter="100" data-suffix="%">0%</span></p>
+        <p class="mt-2 text-xs lg:text-sm text-slate-400 uppercase tracking-wide">Visa Support</p>
+      </div>
+
+      <div class="reveal-up text-center lg:border-r border-white/5">
+        <p class="font-display text-4xl lg:text-5xl font-bold text-white"><span data-counter="100" data-suffix="+">0+</span></p>
+        <p class="mt-2 text-xs lg:text-sm text-slate-400 uppercase tracking-wide">Partner Universities</p>
+      </div>
+
+      <div class="reveal-up text-center lg:border-r border-white/5">
+        <p class="font-display text-4xl lg:text-5xl font-bold text-white">Fully</p>
+        <p class="mt-2 text-xs lg:text-sm text-slate-400 uppercase tracking-wide">Funded Scholarship Guidance</p>
+      </div>
+
+      <div class="reveal-up text-center">
+        <p class="font-display text-4xl lg:text-5xl font-bold text-white">Price</p>
+        <p class="mt-2 text-xs lg:text-sm text-slate-400 uppercase tracking-wide">Guarantee</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION: Italy Advantage Showcase
+     ========================================================================== -->
+<section class="relative py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
+      <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">Why Italy</span>
+      <h2 class="font-display text-3xl lg:text-5xl font-semibold text-white mt-4">The Italy Advantage</h2>
+      <p class="text-slate-400 mt-4">A world-class education system engineered for merit, affordability, and opportunity.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
+
+      <div class="reveal-up glass rounded-3xl p-8 card-hover spotlight-card tilt-card">
+        <div class="icon-pop flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10 border border-emerald-500/20 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V6m0 10v2m9-8a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-white mb-3">Fully Funded Scholarships</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">DSU &amp; EDISU regional grants cover tuition, housing, and living expenses for eligible students.</p>
+      </div>
+
+      <div class="reveal-up glass rounded-3xl p-8 card-hover spotlight-card tilt-card">
+        <div class="icon-pop flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-500/10 border border-amber-500/20 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-white mb-3">Top Ranked Public Universities</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Access globally ranked institutions including Bocconi, Politecnico, and Sapienza.</p>
+      </div>
+
+      <div class="reveal-up glass rounded-3xl p-8 card-hover spotlight-card tilt-card">
+        <div class="icon-pop flex h-14 w-14 items-center justify-center rounded-2xl bg-red-500/10 border border-red-500/20 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-white mb-3">Schengen Visa Access</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Your Italian residence permit opens the door to travel across the entire Schengen zone.</p>
+      </div>
+
+      <div class="reveal-up glass rounded-3xl p-8 card-hover spotlight-card tilt-card">
+        <div class="icon-pop flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10 border border-emerald-500/20 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        </div>
+        <h3 class="font-display text-lg font-semibold text-white mb-3">Work Opportunities</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Students may work part-time during studies with pathways to post-graduate employment.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION: Interactive 5-Step Roadmap
+     ========================================================================== -->
+<section id="roadmap" class="relative py-24 lg:py-32 bg-[#0A0F1A] border-y border-white/5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-20 reveal-up">
+      <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">Your Journey</span>
+      <h2 class="font-display text-3xl lg:text-5xl font-semibold text-white mt-4">The 5-Step Roadmap</h2>
+      <p class="text-slate-400 mt-4">A clear, guided path from first assessment to landing in Italy.</p>
+    </div>
+
+    <!-- Mobile: vertical timeline -->
+    <div class="relative lg:hidden pl-10">
+      <div class="absolute left-4 top-0 bottom-0 w-px bg-white/10">
+        <div id="roadmap-line-fill" class="w-px h-full roadmap-line" style="transform: scaleY(0)"></div>
+      </div>
+
+      <div class="space-y-14">
+        <div class="reveal-up relative">
+          <span class="absolute -left-10 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-amber-500 text-xs font-bold text-white">1</span>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Assessment</h3>
+          <p class="text-sm text-slate-400">Free eligibility &amp; academic profile evaluation tailored to your goals.</p>
+        </div>
+        <div class="reveal-up relative">
+          <span class="absolute -left-10 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-amber-500 text-xs font-bold text-white">2</span>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">University Application</h3>
+          <p class="text-sm text-slate-400">Shortlisting programs and submitting applications to top Italian universities.</p>
+        </div>
+        <div class="reveal-up relative">
+          <span class="absolute -left-10 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">3</span>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Scholarship</h3>
+          <p class="text-sm text-slate-400">DSU/EDISU application support to secure fully-funded scholarship status.</p>
+        </div>
+        <div class="reveal-up relative">
+          <span class="absolute -left-10 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">4</span>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Pre-Enrollment</h3>
+          <p class="text-sm text-slate-400">Document legalization, CIMEA verification, and pre-enrollment at the Italian consulate.</p>
+        </div>
+        <div class="reveal-up relative">
+          <span class="absolute -left-10 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">5</span>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Visa</h3>
+          <p class="text-sm text-slate-400">Study visa filing and interview preparation for a seamless approval.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop: horizontal timeline -->
+    <div class="hidden lg:block relative">
+      <div class="absolute left-0 right-0 top-7 h-px bg-white/10">
+        <div id="roadmap-line-fill-h" class="h-px w-full roadmap-line-h" style="transform: scaleX(0)"></div>
+      </div>
+      <div class="grid grid-cols-5 gap-6 reveal-stagger">
+
+        <div class="reveal-up flex flex-col items-center text-center">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-amber-500 text-lg font-bold text-white mb-6 shadow-lg shadow-amber-900/30">1</span>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Assessment</h3>
+          <p class="text-sm text-slate-400 px-2">Free eligibility &amp; academic profile evaluation.</p>
+        </div>
+        <div class="reveal-up flex flex-col items-center text-center">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-amber-500 text-lg font-bold text-white mb-6 shadow-lg shadow-amber-900/30">2</span>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">University Application</h3>
+          <p class="text-sm text-slate-400 px-2">Shortlisting &amp; submitting applications.</p>
+        </div>
+        <div class="reveal-up flex flex-col items-center text-center">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 text-lg font-bold text-white mb-6 shadow-lg shadow-emerald-900/30">3</span>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Scholarship</h3>
+          <p class="text-sm text-slate-400 px-2">DSU/EDISU fully-funded support.</p>
+        </div>
+        <div class="reveal-up flex flex-col items-center text-center">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 text-lg font-bold text-white mb-6 shadow-lg shadow-emerald-900/30">4</span>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Pre-Enrollment</h3>
+          <p class="text-sm text-slate-400 px-2">Document legalization &amp; verification.</p>
+        </div>
+        <div class="reveal-up flex flex-col items-center text-center">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 text-lg font-bold text-white mb-6 shadow-lg shadow-emerald-900/30">5</span>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Visa</h3>
+          <p class="text-sm text-slate-400 px-2">Study visa filing &amp; interview prep.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION: Life in Italy — Image Showcase
+     ========================================================================== -->
+<section class="relative py-24 lg:py-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
+      <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">A Glimpse Ahead</span>
+      <h2 class="font-display text-3xl lg:text-5xl font-semibold text-white mt-4">Life Waiting for You in Italy</h2>
+      <p class="text-slate-400 mt-4">Historic campuses, vibrant cities, and a student life worth the journey.</p>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 reveal-stagger">
+
+      <div class="reveal-up img-zoom-wrap tilt-card relative rounded-3xl h-64 lg:h-80 lg:col-span-2 lg:row-span-2 shadow-xl shadow-black/30">
+        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1400&auto=format&fit=crop" alt="Rome cityscape" class="absolute inset-0 h-full w-full object-cover">
+        <div class="img-zoom-overlay absolute inset-0"></div>
+        <div class="relative h-full flex flex-col justify-end p-6">
+          <p class="font-display text-xl font-semibold text-white">Rome</p>
+          <p class="text-xs text-slate-300 mt-1">Where ancient history meets modern academia</p>
+        </div>
+      </div>
+
+      <div class="reveal-up img-zoom-wrap tilt-card relative rounded-3xl h-64 shadow-xl shadow-black/30">
+        <img src="https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?q=80&w=1000&auto=format&fit=crop" alt="Florence architecture" class="absolute inset-0 h-full w-full object-cover">
+        <div class="img-zoom-overlay absolute inset-0"></div>
+        <div class="relative h-full flex flex-col justify-end p-5">
+          <p class="font-display text-lg font-semibold text-white">Florence</p>
+        </div>
+      </div>
+
+      <div class="reveal-up img-zoom-wrap tilt-card relative rounded-3xl h-64 shadow-xl shadow-black/30">
+        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1000&auto=format&fit=crop" alt="Turin university library" class="absolute inset-0 h-full w-full object-cover">
+        <div class="img-zoom-overlay absolute inset-0"></div>
+        <div class="relative h-full flex flex-col justify-end p-5">
+          <p class="font-display text-lg font-semibold text-white">Turin</p>
+        </div>
+      </div>
+
+      <div class="reveal-up img-zoom-wrap tilt-card relative rounded-3xl h-64 shadow-xl shadow-black/30">
+        <img src="https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=1000&auto=format&fit=crop" alt="Milan skyline" class="absolute inset-0 h-full w-full object-cover">
+        <div class="img-zoom-overlay absolute inset-0"></div>
+        <div class="relative h-full flex flex-col justify-end p-5">
+          <p class="font-display text-lg font-semibold text-white">Milan</p>
+        </div>
+      </div>
+
+      <div class="reveal-up img-zoom-wrap tilt-card relative rounded-3xl h-64 shadow-xl shadow-black/30">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1000&auto=format&fit=crop" alt="Italian coastline" class="absolute inset-0 h-full w-full object-cover">
+        <div class="img-zoom-overlay absolute inset-0"></div>
+        <div class="relative h-full flex flex-col justify-end p-5">
+          <p class="font-display text-lg font-semibold text-white">Cinque Terre</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION: Testimonials Carousel (see includes/testimonials.html)
+     ========================================================================== -->
+<section class="relative py-24 lg:py-32 overflow-hidden">
+  <!-- decorative glow -->
+  <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[70rem] h-[70rem] rounded-full bg-emerald-600/[0.06] blur-3xl"></div>
+  <div class="pointer-events-none absolute bottom-0 right-0 w-[30rem] h-[30rem] rounded-full bg-amber-600/[0.07] blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 reveal-up">
+      <div class="max-w-xl">
+        <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">Success Stories</span>
+        <h2 class="font-display text-3xl lg:text-5xl font-semibold text-white mt-4">Voices From Our Scholars</h2>
+        <p class="text-slate-400 mt-4">Real students, real acceptances, real fully-funded futures in Italy.</p>
+      </div>
+      <div class="flex items-center gap-8 shrink-0">
+        <div>
+          <p class="font-display text-3xl font-bold text-white">4.9<span class="text-lg text-slate-500">/5</span></p>
+          <p class="text-xs text-slate-500 uppercase tracking-wide mt-1">Average Rating</p>
+        </div>
+        <div class="h-10 w-px bg-white/10"></div>
+        <div>
+          <p class="font-display text-3xl font-bold text-white">1,200+</p>
+          <p class="text-xs text-slate-500 uppercase tracking-wide mt-1">Students Placed</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper testimonials-swiper reveal-up">
+      <div class="swiper-wrapper pb-4">
+
+        <div class="swiper-slide h-auto">
+          <div class="testimonial-card relative glass rounded-3xl p-8 h-full flex flex-col card-hover spotlight-card overflow-hidden">
+            <span class="pointer-events-none absolute -top-6 right-4 font-display text-[7rem] leading-none text-white/[0.04] select-none">&rdquo;</span>
+
+            <div class="relative flex items-center justify-between mb-5">
+              <div class="flex items-center gap-0.5">
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-wide text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-2.5 py-1">DSU Scholar</span>
+            </div>
+
+            <p class="relative text-slate-300 text-sm leading-relaxed flex-1">"Dream Italia guided me through every step — from my DSU scholarship application to visa approval. I'm now studying Mechanical Engineering in Turin, tuition-free."</p>
+
+            <div class="relative flex items-center gap-3 mt-6 pt-6 border-t border-white/5">
+              <div class="h-12 w-12 shrink-0 rounded-full ring-2 ring-amber-500/30 bg-gradient-to-br from-emerald-600 to-amber-600 flex items-center justify-center font-display font-semibold text-white">H</div>
+              <div class="min-w-0">
+                <p class="text-sm font-semibold text-white truncate">Hassan Raza</p>
+                <p class="text-xs text-slate-500 truncate">Politecnico di Torino</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="testimonial-card relative glass rounded-3xl p-8 h-full flex flex-col card-hover spotlight-card overflow-hidden">
+            <span class="pointer-events-none absolute -top-6 right-4 font-display text-[7rem] leading-none text-white/[0.04] select-none">&rdquo;</span>
+
+            <div class="relative flex items-center justify-between mb-5">
+              <div class="flex items-center gap-0.5">
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-wide text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded-full px-2.5 py-1">EDISU Scholar</span>
+            </div>
+
+            <p class="relative text-slate-300 text-sm leading-relaxed flex-1">"I never imagined I could study in Europe without paying tuition. The team handled my EDISU scholarship paperwork flawlessly. Forever grateful."</p>
+
+            <div class="relative flex items-center gap-3 mt-6 pt-6 border-t border-white/5">
+              <div class="h-12 w-12 shrink-0 rounded-full ring-2 ring-amber-500/30 bg-gradient-to-br from-emerald-600 to-amber-600 flex items-center justify-center font-display font-semibold text-white">F</div>
+              <div class="min-w-0">
+                <p class="text-sm font-semibold text-white truncate">Fatima Noor</p>
+                <p class="text-xs text-slate-500 truncate">University of Bologna</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="testimonial-card relative glass rounded-3xl p-8 h-full flex flex-col card-hover spotlight-card overflow-hidden">
+            <span class="pointer-events-none absolute -top-6 right-4 font-display text-[7rem] leading-none text-white/[0.04] select-none">&rdquo;</span>
+
+            <div class="relative flex items-center justify-between mb-5">
+              <div class="flex items-center gap-0.5">
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500/30" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-wide text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-2.5 py-1">Visa Fast-Track</span>
+            </div>
+
+            <p class="relative text-slate-300 text-sm leading-relaxed flex-1">"From my first WhatsApp message to landing in Milan, the support was personal and precise. My visa was approved in weeks, not months."</p>
+
+            <div class="relative flex items-center gap-3 mt-6 pt-6 border-t border-white/5">
+              <div class="h-12 w-12 shrink-0 rounded-full ring-2 ring-amber-500/30 bg-gradient-to-br from-emerald-600 to-amber-600 flex items-center justify-center font-display font-semibold text-white">U</div>
+              <div class="min-w-0">
+                <p class="text-sm font-semibold text-white truncate">Umer Farooq</p>
+                <p class="text-xs text-slate-500 truncate">Bocconi University</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide h-auto">
+          <div class="testimonial-card relative glass rounded-3xl p-8 h-full flex flex-col card-hover spotlight-card overflow-hidden">
+            <span class="pointer-events-none absolute -top-6 right-4 font-display text-[7rem] leading-none text-white/[0.04] select-none">&rdquo;</span>
+
+            <div class="relative flex items-center justify-between mb-5">
+              <div class="flex items-center gap-0.5">
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+                <svg class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1 1 5.8L10 14.9l-5.21 2.62 1-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-wide text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded-full px-2.5 py-1">Full Support</span>
+            </div>
+
+            <p class="relative text-slate-300 text-sm leading-relaxed flex-1">"As a working parent, I didn't have time to research agencies. Dream Italia's process was transparent, honest, and genuinely affordable."</p>
+
+            <div class="relative flex items-center gap-3 mt-6 pt-6 border-t border-white/5">
+              <div class="h-12 w-12 shrink-0 rounded-full ring-2 ring-amber-500/30 bg-gradient-to-br from-emerald-600 to-amber-600 flex items-center justify-center font-display font-semibold text-white">S</div>
+              <div class="min-w-0">
+                <p class="text-sm font-semibold text-white truncate">Sana Malik</p>
+                <p class="text-xs text-slate-500 truncate">Sapienza University of Rome</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center gap-6 mt-12">
+      <button class="testimonials-prev flex h-11 w-11 items-center justify-center rounded-full glass hover:border-amber-500/50 hover:bg-amber-500/10 transition-colors" aria-label="Previous">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <div class="testimonials-pagination flex items-center"></div>
+      <button class="testimonials-next flex h-11 w-11 items-center justify-center rounded-full glass hover:border-amber-500/50 hover:bg-amber-500/10 transition-colors" aria-label="Next">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION: Dynamic Lead Capture Form (see includes/lead-form.html)
+     ========================================================================== -->
+<section class="relative py-24 lg:py-32 bg-[#0A0F1A] border-t border-white/5 overflow-hidden">
+  <div class="absolute inset-0 opacity-20">
+    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=2400&auto=format&fit=crop" alt="" class="w-full h-full object-cover">
+  </div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal-up">
+        <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">Start Today</span>
+        <h2 class="font-display text-3xl lg:text-5xl font-semibold text-white mt-4 leading-tight">Ready to Begin Your <span class="text-gradient-italia">Italian Journey?</span></h2>
+        <p class="text-slate-400 mt-6 leading-relaxed max-w-md">Fill out the form and our advisors will assess your eligibility for admission and scholarship within 24 hours — completely free.</p>
+
+        <div class="mt-10 space-y-5">
+          <div class="flex items-center gap-4">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/20 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            </span>
+            <p class="text-sm text-slate-300">No hidden charges, transparent pricing</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/20 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            </span>
+            <p class="text-sm text-slate-300">Dedicated WhatsApp advisor from day one</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/20 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            </span>
+            <p class="text-sm text-slate-300">End-to-end support until your first day in Italy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-up">
+        <div class="glass-strong rounded-3xl p-8 lg:p-10 max-w-xl w-full mx-auto">
+          <div class="mb-7">
+            <span class="inline-flex items-center gap-2 rounded-full bg-amber-500/10 border border-amber-500/30 px-3 py-1 text-xs font-semibold text-amber-500 mb-4">
+              100% Free &amp; No Obligation
+            </span>
+            <h3 class="font-display text-2xl lg:text-3xl font-semibold text-white">Check Your Eligibility</h3>
+            <p class="text-sm text-slate-400 mt-2">Get a personalized assessment for admission &amp; scholarship eligibility within 24 hours.</p>
+          </div>
+
+          <form data-lead-form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+            <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY">
+            <input type="hidden" name="subject" value="New Eligibility Assessment Request — Dream Italia UniPathways">
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+            <div>
+              <label for="student_name" class="block text-xs font-medium text-slate-300 mb-2">Full Name*</label>
+              <input type="text" id="student_name" name="student_name" required placeholder="e.g. Ayesha Khan" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+            </div>
+
+            <div>
+              <label for="phone_whatsapp" class="block text-xs font-medium text-slate-300 mb-2">WhatsApp Number*</label>
+              <input type="tel" id="phone_whatsapp" name="phone_whatsapp" required placeholder="+92 3XX XXXXXXX" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="qualification" class="block text-xs font-medium text-slate-300 mb-2">Current Qualification*</label>
+                <select id="qualification" name="qualification" required class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+                  <option value="" class="bg-[#0D1420]">Select</option>
+                  <option value="Intermediate / A-Levels" class="bg-[#0D1420]">Intermediate / A-Levels</option>
+                  <option value="Bachelor's Degree" class="bg-[#0D1420]">Bachelor's Degree</option>
+                  <option value="Master's Degree" class="bg-[#0D1420]">Master's Degree</option>
+                  <option value="Other" class="bg-[#0D1420]">Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="target_degree" class="block text-xs font-medium text-slate-300 mb-2">Target Degree*</label>
+                <select id="target_degree" name="target_degree" required class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+                  <option value="" class="bg-[#0D1420]">Select</option>
+                  <option value="Bachelor's" class="bg-[#0D1420]">Bachelor's</option>
+                  <option value="Master's" class="bg-[#0D1420]">Master's</option>
+                  <option value="PhD" class="bg-[#0D1420]">PhD</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="country" class="block text-xs font-medium text-slate-300 mb-2">Country*</label>
+                <select id="country" name="country" required class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+                  <option value="" class="bg-[#0D1420]">Select</option>
+                  <option value="Pakistan" class="bg-[#0D1420]">Pakistan</option>
+                  <option value="India" class="bg-[#0D1420]">India</option>
+                  <option value="Bangladesh" class="bg-[#0D1420]">Bangladesh</option>
+                  <option value="Nepal" class="bg-[#0D1420]">Nepal</option>
+                  <option value="Sri Lanka" class="bg-[#0D1420]">Sri Lanka</option>
+                  <option value="United Arab Emirates" class="bg-[#0D1420]">United Arab Emirates</option>
+                  <option value="Saudi Arabia" class="bg-[#0D1420]">Saudi Arabia</option>
+                  <option value="Qatar" class="bg-[#0D1420]">Qatar</option>
+                  <option value="Egypt" class="bg-[#0D1420]">Egypt</option>
+                  <option value="Nigeria" class="bg-[#0D1420]">Nigeria</option>
+                  <option value="Other" class="bg-[#0D1420]">Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="city" class="block text-xs font-medium text-slate-300 mb-2">City*</label>
+                <input type="text" id="city" name="city" required placeholder="e.g. Lahore" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+              </div>
+            </div>
+
+            <button type="submit" data-submit-btn class="btn-luxury btn-shine arrow-nudge w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 px-6 py-4 text-sm font-semibold text-white">
+              <span data-btn-label>Check My Eligibility</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </button>
+
+            <div data-form-success class="hidden rounded-xl bg-emerald-500/10 border border-emerald-500/30 px-4 py-3 text-sm text-emerald-400"></div>
+            <div data-form-error class="hidden rounded-xl bg-red-500/10 border border-red-500/30 px-4 py-3 text-sm text-red-400"></div>
+
+            <p class="text-center text-[11px] text-slate-500">
+              Prefer WhatsApp? <a href="https://wa.me/393508836325" target="_blank" rel="noopener" class="text-emerald-500 hover:underline">Chat with an advisor now</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==========================================================================
+     COMPONENT: Global Footer (see includes/global-footer.html)
+     ========================================================================== -->
+<footer class="relative border-t border-white/5 bg-[#05080E]">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-3 mb-5">
+          <img src="assets/images/branding/logo.png" alt="Dream Italia UniPathways" class="h-11 w-11 rounded-full object-cover shadow-lg shadow-black/40">
+          <span class="flex flex-col leading-none">
+            <span class="font-display text-lg font-semibold text-white">Dream Italia</span>
+            <span class="text-[10px] uppercase tracking-[0.25em] text-amber-500">UniPathways</span>
+          </span>
+        </a>
+        <p class="text-sm text-slate-400 leading-relaxed mb-6">Your trusted bridge to tuition-free, world-class higher education in Italy — built exclusively for ambitious Pakistani students.</p>
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/393508836325" target="_blank" rel="noopener" class="flex h-10 w-10 items-center justify-center rounded-full glass hover:border-emerald-500/50 transition-colors" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-500" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.766.463 3.484 1.34 4.997L2 22l5.146-1.35A9.958 9.958 0 0012.004 22c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.15a8.13 8.13 0 01-4.146-1.14l-.297-.176-3.055.801.816-2.977-.194-.306a8.14 8.14 0 01-1.276-4.352c0-4.501 3.664-8.165 8.165-8.165s8.165 3.664 8.165 8.165-3.664 8.15-8.174 8.15z"/></svg>
+          </a>
+          <a href="#" class="flex h-10 w-10 items-center justify-center rounded-full glass hover:border-amber-500/50 transition-colors" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.637.415 1.363.465 2.428.05 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.05-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.637-.415-1.363-.465-2.428C2.01 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.065.218-1.79.465-2.428a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.637-.247 1.363-.415 2.428-.465C8.944 2.01 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.25a3.25 3.25 0 110-6.5 3.25 3.25 0 010 6.5zm5.2-8.45a1.17 1.17 0 100-2.34 1.17 1.17 0 000 2.34z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-display text-base font-semibold text-white mb-5">Quick Links</h4>
+        <ul class="space-y-3 text-sm text-slate-400">
+          <li><a href="index.html" class="hover:text-amber-500 transition-colors">Home</a></li>
+          <li><a href="services.html" class="hover:text-amber-500 transition-colors">Services &amp; Italy Guide</a></li>
+          <li><a href="about.html" class="hover:text-amber-500 transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-amber-500 transition-colors">Free Eligibility Check</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display text-base font-semibold text-white mb-5">Legal</h4>
+        <ul class="space-y-3 text-sm text-slate-400">
+          <li><a href="#" class="hover:text-amber-500 transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-amber-500 transition-colors">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-amber-500 transition-colors">Refund Policy</a></li>
+          <li><a href="#" class="hover:text-amber-500 transition-colors">Disclaimer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display text-base font-semibold text-white mb-5">Get in Touch</h4>
+        <ul class="space-y-3 text-sm text-slate-400">
+          <li class="flex items-start gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            <a href="https://wa.me/393508836325" target="_blank" rel="noopener" class="hover:text-amber-500 transition-colors">+39 350 883 6325</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            <a href="mailto:info@dreamitaliaunipathways.com" class="hover:text-amber-500 transition-colors">info@dreamitaliaunipathways.com</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            <span>Milan, Italy &amp; Lahore, Pakistan</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-slate-500">&copy; <span data-current-year>2026</span> Dream Italia UniPathways. All rights reserved.</p>
+      <p class="text-xs text-slate-500">Crafted with dedication for Pakistan's next generation of scholars.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==========================================================================
+     COMPONENT: Floating WhatsApp CTA (see includes/floating-whatsapp.html)
+     ========================================================================== -->
+<a href="https://wa.me/393508836325?text=Ciao!%20I'd%20like%20to%20know%20more%20about%20studying%20in%20Italy." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" class="whatsapp-float glass-strong fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full p-3.5 2xl:pl-4 2xl:pr-5 2xl:py-3.5 shadow-2xl shadow-black/50 hover:scale-105 transition-transform group">
+  <span class="flex h-8 w-8 2xl:h-9 2xl:w-9 items-center justify-center rounded-full bg-emerald-600 shrink-0">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.766.463 3.484 1.34 4.997L2 22l5.146-1.35A9.958 9.958 0 0012.004 22c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.15a8.13 8.13 0 01-4.146-1.14l-.297-.176-3.055.801.816-2.977-.194-.306a8.14 8.14 0 01-1.276-4.352c0-4.501 3.664-8.165 8.165-8.165s8.165 3.664 8.165 8.165-3.664 8.15-8.174 8.15z"/></svg>
+  </span>
+  <span class="hidden 2xl:flex flex-col leading-tight">
+    <span class="text-xs font-semibold text-white">Chat With Us</span>
+    <span class="text-[10px] text-slate-300">+39 350 883 6325</span>
+  </span>
+</a>
+
+<!-- ==========================================================================
+     SCRIPTS
+     ========================================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/sliders.js"></script>
+<script src="assets/js/form-handler.js"></script>
+</body>
+</html>
