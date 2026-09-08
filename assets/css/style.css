@@ -369,12 +369,87 @@ html.lenis, html.lenis body {
 /* ==========================================================================
    Fade-in page load
    ========================================================================== */
+#page-content.page-ready,
 body.page-ready {
   animation: page-fade-in .6s ease both;
 }
 @keyframes page-fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* ==========================================================================
+   Preloader — Pakistan → Italy flight route
+   ========================================================================== */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  transition: opacity .6s ease, visibility .6s ease;
+}
+#preloader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.preloader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  width: min(560px, 86vw);
+}
+.preloader-map {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.preloader-marker-dot {
+  animation: preloader-pulse 2.2s ease-in-out infinite;
+}
+.preloader-marker-ring {
+  animation: preloader-ring 2.2s ease-out infinite;
+  transform-origin: center;
+}
+@keyframes preloader-pulse {
+  0%, 100% { opacity: .65; }
+  50% { opacity: 1; }
+}
+@keyframes preloader-ring {
+  0% { r: 3; opacity: .7; }
+  100% { r: 13; opacity: 0; }
+}
+.preloader-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--color-white);
+}
+.preloader-status {
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+}
+.preloader-status::after {
+  content: '';
+  display: inline-block;
+  width: 1.1em;
+  text-align: left;
+  animation: preloader-dots 1.4s steps(4, end) infinite;
+}
+@keyframes preloader-dots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
 }
 
 /* ==========================================================================

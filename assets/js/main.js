@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------------------------------------------------------------
      Page-load fade-in
      --------------------------------------------------------------------- */
-  requestAnimationFrame(() => document.body.classList.add('page-ready'));
+  const pageContent = document.getElementById('page-content');
+  requestAnimationFrame(() => (pageContent || document.body).classList.add('page-ready'));
 
   /* ---------------------------------------------------------------------
      Scroll progress bar
