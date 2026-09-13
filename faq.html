@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | Dream Italia UniPathways</title>
-<meta name="description" content="Learn about Dream Italia UniPathways' mission to make Italian public university admissions accessible to Pakistani students, and how we compare to traditional agencies.">
+<title>FAQs | Dream Italia UniPathways</title>
+<meta name="description" content="Answers to common questions about our admission guidance, documentation support, visa process, fees, and refund policy for studying in Italy.">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -48,7 +48,6 @@
 <div id="preloader" aria-hidden="true">
   <div class="preloader-inner">
     <svg id="preloader-svg" class="preloader-map" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg">
-      <!-- faint world-map graticule -->
       <g stroke="#94A3B8" stroke-opacity="0.08" stroke-width="1">
         <path d="M0,60 H900" stroke-dasharray="1 9"/>
         <path d="M0,140 H900" stroke-dasharray="1 9"/>
@@ -58,45 +57,33 @@
         <path d="M450,0 V380" stroke-dasharray="1 9"/>
         <path d="M750,0 V380" stroke-dasharray="1 9"/>
       </g>
-
-      <!-- faint landmass silhouettes: Europe (Italy), Africa, Middle East / South Asia -->
       <g fill="#059669" fill-opacity="0.05" stroke="#94A3B8" stroke-opacity="0.12" stroke-width="1.2">
         <path d="M40,110 C70,80 120,75 150,90 C185,70 225,85 235,115 C255,120 260,150 235,165 C245,190 220,215 190,205 C165,230 120,225 110,195 C75,200 55,170 70,145 C50,140 35,125 40,110 Z"/>
         <path d="M330,230 C365,205 420,205 445,235 C475,240 480,275 455,295 C460,320 425,340 395,325 C365,345 320,335 315,305 C285,300 275,270 300,255 C285,245 310,240 330,230 Z"/>
         <path d="M600,60 C630,35 680,35 700,60 C730,55 740,80 720,95 C725,115 700,130 675,120 C650,135 610,125 610,100 C590,95 585,75 600,60 Z"/>
         <path d="M650,150 C685,115 745,105 785,120 C825,100 875,120 885,155 C905,165 900,200 875,210 C880,235 845,255 815,240 C785,265 730,260 715,230 C680,235 655,205 670,180 C645,175 630,160 650,150 Z"/>
       </g>
-
-      <!-- static ambient routes: every origin converging on Italy -->
       <g id="ambient-routes" fill="none" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="1 8"></g>
       <g id="ambient-markers"></g>
-
-      <!-- destination marker: Italy -->
       <g>
         <circle cx="165" cy="140" r="12" fill="none" stroke="#059669" stroke-width="1.5" class="preloader-marker-ring"/>
         <circle cx="165" cy="140" r="5" fill="#059669" class="preloader-marker-dot"/>
         <text x="165" y="122" text-anchor="middle" fill="#E2E8F0" font-size="13" font-weight="600" font-family="Manrope, sans-serif" letter-spacing="0.5">Italy</text>
       </g>
-
-      <!-- active route: cycles through origin countries -->
       <path id="active-glow" d="" fill="none" stroke="#D97706" stroke-opacity="0.15" stroke-width="6" stroke-linecap="round"/>
       <mask id="active-mask">
         <rect id="active-rect" x="0" y="0" width="0" height="380" fill="#fff"/>
       </mask>
       <path id="active-line" d="" fill="none" stroke="#D97706" stroke-opacity="0.95" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 11" mask="url(#active-mask)"/>
-
       <g id="active-origin-marker">
         <circle r="12" fill="none" stroke="#DC2626" stroke-width="1.5" class="preloader-marker-ring"/>
         <circle r="5" fill="#DC2626" class="preloader-marker-dot"/>
         <text id="active-origin-label" text-anchor="middle" fill="#E2E8F0" font-size="13" font-weight="600" font-family="Manrope, sans-serif" letter-spacing="0.5"></text>
       </g>
-
-      <!-- plane -->
       <g id="plane">
         <path d="M0,0 L-12,-4 L-9.5,0 L-12,4 Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="0.4"/>
       </g>
     </svg>
-
     <div class="preloader-brand">Dream Italia UniPathways</div>
     <div class="preloader-status" id="preloader-status">Charting routes to Italy</div>
   </div>
@@ -105,8 +92,6 @@
 (function () {
   var pre = document.getElementById('preloader');
   if (!pre) return;
-
-  /* -------- reveal-on-load -------- */
   var minVisible = 900;
   var startedAt = Date.now();
   function reveal() {
@@ -122,7 +107,6 @@
     window.addEventListener('load', reveal);
   }
 
-  /* -------- flight animation: several countries converging on Italy -------- */
   var ITALY = { x: 165, y: 140 };
   var ORIGINS = [
     { name: 'Pakistan', x: 745, y: 175 },
@@ -152,7 +136,6 @@
     return 'M' + a.x + ',' + a.y + ' Q' + ctrl.x + ',' + ctrl.y + ' ' + b.x + ',' + b.y;
   }
 
-  /* faint always-on routes from every origin, drawn once */
   ORIGINS.forEach(function (origin) {
     var ctrl = controlPoint(origin, ITALY);
     var p = document.createElementNS(ns, 'path');
@@ -243,11 +226,7 @@
 <div id="scroll-progress"></div>
 
 <!-- ==========================================================================
-     COMPONENT: Global Header
-     ========================================================================== -->
-<!-- ==========================================================================
      COMPONENT: Global Header / Navigation
-     Reusable across all pages. Migrate to WP template-part / Blade component.
      ========================================================================== -->
 <header id="global-header" class="fixed top-0 left-0 right-0 z-50">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
@@ -307,156 +286,176 @@
 <!-- ==========================================================================
      SECTION: Page Hero
      ========================================================================== -->
-<section class="relative pt-40 pb-24 lg:pt-48 lg:pb-32 overflow-hidden" data-parallax-wrap>
+<section class="relative pt-40 pb-20 lg:pt-48 lg:pb-24 overflow-hidden" data-parallax-wrap>
   <div class="absolute inset-0">
-    <img src="https://images.unsplash.com/photo-1534445867742-43195f401b6c?q=80&w=2400&auto=format&fit=crop" alt="Italian city skyline" class="absolute inset-x-0 top-[-15%] w-full h-[130%] object-cover" data-parallax="0.15">
+    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=2400&auto=format&fit=crop" alt="Italian university library" class="absolute inset-x-0 top-[-15%] w-full h-[130%] object-cover" data-parallax="0.15">
     <div class="absolute inset-0 hero-gradient-overlay"></div>
   </div>
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
-    <span class="hero-eyebrow inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-amber-500 mb-6">About Us</span>
-    <h1 class="hero-headline font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-white max-w-3xl">Built by People Who Believe <span class="text-gradient-italia">Education Should Be Earned, Not Bought</span></h1>
-    <p class="hero-subheadline mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">Dream Italia UniPathways exists to make Italy's world-class public universities genuinely accessible to Pakistani students — with honesty at every step.</p>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-center">
+    <span class="hero-eyebrow inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-amber-500 mb-6">Frequently Asked Questions</span>
+    <h1 class="hero-headline font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-white max-w-3xl mx-auto">Everything Students Ask Us <span class="text-gradient-italia">Before They Apply</span></h1>
+    <p class="hero-subheadline mt-6 text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">Honest, plain-language answers about our services, fees, and what to expect — based directly on our consultancy agreement.</p>
   </div>
 </section>
 
 <!-- ==========================================================================
-     SECTION: Mission Statement
+     SECTION: FAQ Accordion Groups
      ========================================================================== -->
-<section class="relative py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <div class="reveal-up order-2 lg:order-1">
-        <div class="img-zoom-wrap relative rounded-3xl aspect-[4/5] shadow-2xl shadow-black/40">
-          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1400&auto=format&fit=crop" alt="Students collaborating" class="w-full h-full object-cover">
-          <div class="img-zoom-overlay absolute inset-0"></div>
-          <div class="absolute bottom-6 left-6 right-6 glass-strong rounded-2xl px-5 py-4 flex items-center gap-4">
-            <div class="flex -space-x-3">
-              <div class="h-9 w-9 rounded-full bg-gradient-to-br from-emerald-600 to-amber-600 border-2 border-[#080C14]"></div>
-              <div class="h-9 w-9 rounded-full bg-gradient-to-br from-amber-600 to-red-600 border-2 border-[#080C14]"></div>
-              <div class="h-9 w-9 rounded-full bg-gradient-to-br from-red-600 to-emerald-600 border-2 border-[#080C14]"></div>
-            </div>
-            <p class="text-xs text-slate-300 leading-snug">Joined by <span class="text-white font-semibold">1,200+</span> students already on their way to Italy</p>
+<section class="relative py-16 lg:py-20">
+  <div class="max-w-4xl mx-auto px-6 lg:px-10">
+
+    <!-- Group: Our Services -->
+    <div class="mb-14 reveal-up">
+      <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">Our Services</span>
+      <h2 class="font-display text-2xl lg:text-3xl font-semibold text-white mt-3 mb-6">What We Help With</h2>
+
+      <div class="space-y-4 reveal-stagger">
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">What services does Dream Italia UniPathways actually provide?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">We provide advisory and administrative support for four things: (1) university admission guidance — choosing programs, course matching, and submitting your application via the Universitaly portal; (2) pre-enrollment &amp; documentation — compiling academic papers, translations, and CIMEA/DOV statements; (3) visa guidance — reviewing your checklist requirements; and (4) general advice on the Permesso di Soggiorno (residence permit) process within 8 days of arriving in Italy.</p>
+          </div>
+        </div>
+
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">Do you help with scholarships like DSU or EDISU?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">Scholarship and regional grant programs (like DSU or EDISU) are run entirely by Italian regional bodies, not by us. They are not part of our paid service scope, and we do not guarantee scholarship outcomes. If you'd like, we can point you toward the official portals so you can apply directly.</p>
+          </div>
+        </div>
+
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">What is CIMEA/DOV, and why do I need it?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">CIMEA (Centro di Informazione sulla Mobilità e le Equivalenze Accademiche) issues the Dichiarazione di Valore (DOV) — the official Italian recognition of your existing academic qualifications. Universities and the consulate require it before enrollment. We assist with compiling and submitting the right documents; the CIMEA/pre-screening fee itself is paid directly by you.</p>
+          </div>
+        </div>
+
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">Do you guarantee university admission or visa approval?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">No. We act in an advisory and administrative capacity only. The final decision on admission, scholarships, or a Type-D study visa always rests with the respective Italian university and the Italian diplomatic authorities — we do not and cannot guarantee any outcome.</p>
           </div>
         </div>
       </div>
-      <div class="reveal-up order-1 lg:order-2">
-        <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">Our Mission</span>
-        <h2 class="font-display text-3xl lg:text-4xl font-semibold text-white mt-4 leading-tight">Removing the Barriers Between Pakistani Talent and Italian Universities</h2>
-        <p class="text-slate-400 mt-6 leading-relaxed">Every year, thousands of talented Pakistani students are priced out of quality higher education — not because they lack merit, but because they lack guidance. We built Dream Italia UniPathways to close that gap.</p>
-        <p class="text-slate-400 mt-4 leading-relaxed">Our mission is simple: connect ambitious students with Italy's public university system, and walk beside them through admissions, documentation, and visas until they land safely on Italian soil.</p>
+    </div>
 
-        <div class="mt-8 grid grid-cols-2 gap-6">
-          <div>
-            <p class="font-display text-3xl font-bold text-white">2019</p>
-            <p class="text-xs text-slate-500 uppercase tracking-wide mt-1">Founded</p>
+    <!-- Group: Fees & Payment -->
+    <div class="mb-14 reveal-up">
+      <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">Fees &amp; Payment</span>
+      <h2 class="font-display text-2xl lg:text-3xl font-semibold text-white mt-3 mb-6">Costs, Payments &amp; Refunds</h2>
+
+      <div class="space-y-4 reveal-stagger">
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">How much do you charge, and how is it paid?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">Our total service fee is a fixed PKR 100,000, split into two installments: PKR 50,000 payable upon signing the service agreement, and PKR 50,000 payable once you secure university admission/acceptance. There are no hidden charges — the fee structure is fixed and published upfront.</p>
           </div>
-          <div>
-            <p class="font-display text-3xl font-bold text-white">1,200+</p>
-            <p class="text-xs text-slate-500 uppercase tracking-wide mt-1">Students Placed</p>
+        </div>
+
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">Does your fee cover university, visa, or CIMEA fees?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">No. Our service fee excludes third-party costs — university application fees, pre-screening fees (e.g. CIMEA), embassy/consulate visa fees, health insurance premiums, and translation costs. These are paid directly by you to the relevant institution, consulate, or provider.</p>
+          </div>
+        </div>
+
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">Is the advance payment refundable?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">Yes — the initial PKR 50,000 advance is refundable if university admission is not secured through no fault of yours. However, service fees become strictly non-refundable once admission is granted, or if your visa application is rejected due to false documents, insufficient funds, or missing your appointment.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ==========================================================================
-     SECTION: Company Background / Values
-     ========================================================================== -->
-<section class="relative py-24 lg:py-28 bg-[#0A0F1A] border-y border-white/5">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
-      <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">Our Story</span>
-      <h2 class="font-display text-3xl lg:text-5xl font-semibold text-white mt-4">Where We Come From</h2>
-      <p class="text-slate-400 mt-4">Founded by former international students who lived the exact journey they now guide others through.</p>
-    </div>
+    <!-- Group: Your Responsibilities -->
+    <div class="mb-14 reveal-up">
+      <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">Your Responsibilities</span>
+      <h2 class="font-display text-2xl lg:text-3xl font-semibold text-white mt-3 mb-6">What We Expect From You</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-stagger">
-      <div class="reveal-up glass rounded-3xl p-8 card-hover spotlight-card tilt-card">
-        <div class="icon-pop flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10 border border-emerald-500/20 mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <div class="space-y-4 reveal-stagger">
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">What am I responsible for as a client?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">You agree to provide accurate, truthful, and authentic documents and personal information; pay all official fees directly to universities, consulates, or government portals; and attend every mandatory in-person appointment at the Italian Embassy/Consulate.</p>
+          </div>
         </div>
-        <h3 class="font-display text-lg font-semibold text-white mb-3">Integrity First</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">We never promise what we can't deliver. Every eligibility assessment is honest, even when the answer is "not yet."</p>
-      </div>
-      <div class="reveal-up glass rounded-3xl p-8 card-hover spotlight-card tilt-card">
-        <div class="icon-pop flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-500/10 border border-amber-500/20 mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-        </div>
-        <h3 class="font-display text-lg font-semibold text-white mb-3">Speed &amp; Precision</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">Admission and visa deadlines don't wait. Our processes are built for accuracy under tight timelines.</p>
-      </div>
-      <div class="reveal-up glass rounded-3xl p-8 card-hover spotlight-card tilt-card">
-        <div class="icon-pop flex h-14 w-14 items-center justify-center rounded-2xl bg-red-500/10 border border-red-500/20 mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-8.13a4 4 0 110 8 4 4 0 010-8zm6 3a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-        </div>
-        <h3 class="font-display text-lg font-semibold text-white mb-3">Student-Centric</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">Every recommendation is built around your goals and budget — never a university's commission structure.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ==========================================================================
-     SECTION: Comparison Matrix — Dream Italia vs Traditional Agencies
-     ========================================================================== -->
-<section class="relative py-24 lg:py-28">
-  <div class="max-w-6xl mx-auto px-6 lg:px-10">
-    <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
-      <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">The Difference</span>
-      <h2 class="font-display text-3xl lg:text-5xl font-semibold text-white mt-4">Dream Italia vs. Traditional Agencies</h2>
-      <p class="text-slate-400 mt-4">See exactly why families trust us over generic consultancies.</p>
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">What happens if I miss my consulate appointment or submit false documents?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">Our service fee becomes non-refundable if your visa is rejected because of false documents, lack of funds, or failure to attend your appointment. This is why honesty and preparation matter — we're only able to guide you well when the information you give us is accurate.</p>
+          </div>
+        </div>
+
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">What law governs our agreement?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">Our Service Agreement is governed by and construed in accordance with the laws of Pakistan.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="reveal-up glass-strong rounded-3xl overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse min-w-[640px]">
-          <thead>
-            <tr class="border-b border-white/10">
-              <th class="px-6 py-5 text-sm font-semibold text-slate-300 uppercase tracking-wide">Criteria</th>
-              <th class="px-6 py-5 text-sm font-semibold text-white uppercase tracking-wide bg-emerald-600/10">
-                <span class="inline-flex items-center gap-2">
-                  <span class="h-2 w-2 rounded-full bg-emerald-500"></span> Dream Italia UniPathways
-                </span>
-              </th>
-              <th class="px-6 py-5 text-sm font-semibold text-slate-400 uppercase tracking-wide">Traditional Agencies</th>
-            </tr>
-          </thead>
-          <tbody class="text-sm">
-            <tr class="border-b border-white/5">
-              <td class="px-6 py-5 text-slate-300 font-medium">Documentation Support</td>
-              <td class="px-6 py-5 bg-emerald-600/5"><span class="text-emerald-400">✓</span> CIMEA/DOV &amp; translations handled end-to-end</td>
-              <td class="px-6 py-5 text-slate-500">Often left to the student</td>
-            </tr>
-            <tr class="border-b border-white/5">
-              <td class="px-6 py-5 text-slate-300 font-medium">Pricing Transparency</td>
-              <td class="px-6 py-5 bg-emerald-600/5"><span class="text-emerald-400">✓</span> Fixed, published fee structure</td>
-              <td class="px-6 py-5 text-slate-500">Hidden charges common</td>
-            </tr>
-            <tr class="border-b border-white/5">
-              <td class="px-6 py-5 text-slate-300 font-medium">Visa Checklist Guidance</td>
-              <td class="px-6 py-5 bg-emerald-600/5"><span class="text-emerald-400">✓</span> Full document checklist review</td>
-              <td class="px-6 py-5 text-slate-500">Rarely offered</td>
-            </tr>
-            <tr class="border-b border-white/5">
-              <td class="px-6 py-5 text-slate-300 font-medium">Response Time</td>
-              <td class="px-6 py-5 bg-emerald-600/5"><span class="text-emerald-400">✓</span> Same-day WhatsApp support</td>
-              <td class="px-6 py-5 text-slate-500">Days to respond</td>
-            </tr>
-            <tr class="border-b border-white/5">
-              <td class="px-6 py-5 text-slate-300 font-medium">Post-Landing Support</td>
-              <td class="px-6 py-5 bg-emerald-600/5"><span class="text-emerald-400">✓</span> Residence permit &amp; settling-in help</td>
-              <td class="px-6 py-5 text-slate-500">Support ends at visa stamp</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-5 text-slate-300 font-medium">Price Guarantee</td>
-              <td class="px-6 py-5 bg-emerald-600/5"><span class="text-emerald-400">✓</span> Locked-in pricing, no surprises</td>
-              <td class="px-6 py-5 text-slate-500">Prices increase mid-process</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Group: Why Us -->
+    <div class="reveal-up">
+      <span class="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">Why Dream Italia</span>
+      <h2 class="font-display text-2xl lg:text-3xl font-semibold text-white mt-3 mb-6">Why Students Choose Us</h2>
+
+      <div class="space-y-4 reveal-stagger">
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">Why choose Dream Italia over other consultants in Pakistan?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">We're Pakistanis actually living in Italy, and we started this because we've seen how many students get charged very high, often unclear fees by agents back home who don't really understand the process themselves. Our fee is fixed and published upfront, and because we're on the ground in Italy, our guidance on documentation, visas, and settling in comes from direct, current experience — not guesswork.</p>
+          </div>
+        </div>
+
+        <div class="reveal-up glass rounded-2xl overflow-hidden">
+          <button data-accordion-trigger class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
+            <span class="font-display text-base font-semibold text-white">I don't know where to even start — can you help?</span>
+            <span data-accordion-icon class="text-amber-500 text-xl leading-none transition-transform shrink-0">+</span>
+          </button>
+          <div class="px-6 overflow-hidden transition-all duration-300" style="max-height:0px">
+            <p class="pb-6 text-sm text-slate-400 leading-relaxed">Yes — that's exactly who we built this for. Most students who reach out don't know the procedure at all. Fill out the free eligibility form or message us on WhatsApp, and we'll walk you through it step by step from your very first question.</p>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -465,8 +464,8 @@
      ========================================================================== -->
 <section class="relative py-20 bg-[#0A0F1A] border-t border-white/5">
   <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center reveal-up">
-    <h2 class="font-display text-3xl lg:text-4xl font-semibold text-white">Let's Build Your Italian Future Together</h2>
-    <p class="text-slate-400 mt-4 max-w-xl mx-auto">Join over 1,200 students who trusted us with their journey to Italy.</p>
+    <h2 class="font-display text-3xl lg:text-4xl font-semibold text-white">Still Have Questions?</h2>
+    <p class="text-slate-400 mt-4 max-w-xl mx-auto">Talk to us directly — we reply personally, not with a call center script.</p>
     <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="contact.html" class="btn-luxury btn-shine arrow-nudge inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-8 py-4 text-sm font-semibold text-white w-full sm:w-auto">Check Eligibility</a>
       <a href="https://wa.me/393508836325" target="_blank" rel="noopener" class="btn-luxury btn-glow-emerald inline-flex items-center justify-center gap-2 rounded-full glass px-8 py-4 text-sm font-semibold text-white w-full sm:w-auto">WhatsApp an Advisor</a>
@@ -478,10 +477,6 @@
 
 <!-- ==========================================================================
      COMPONENT: Global Footer
-     ========================================================================== -->
-<!-- ==========================================================================
-     COMPONENT: Global Footer
-     Reusable across all pages. Migrate to WP template-part / Blade component.
      ========================================================================== -->
 <footer class="relative border-t border-white/5 bg-[#05080E]">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
@@ -546,7 +541,7 @@
           </li>
           <li class="flex items-start gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-            <span>Italy,Pakistan</span>
+            <span>Italy, Pakistan</span>
           </li>
         </ul>
       </div>
@@ -561,10 +556,6 @@
 
 <!-- ==========================================================================
      COMPONENT: Floating WhatsApp CTA
-     ========================================================================== -->
-<!-- ==========================================================================
-     COMPONENT: Floating WhatsApp CTA
-     Sticky across all pages, glassmorphism, pulse animation.
      ========================================================================== -->
 <a
   href="https://wa.me/393508836325?text=Ciao!%20I'd%20like%20to%20know%20more%20about%20studying%20in%20Italy."
