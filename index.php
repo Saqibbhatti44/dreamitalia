@@ -266,7 +266,7 @@
 <header id="global-header" class="fixed top-0 left-0 right-0 z-50">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="flex items-center justify-between h-20 lg:h-24">
-      <a href="index.html" class="flex items-center gap-3 group">
+      <a href="index.php" class="flex items-center gap-3 group">
         <img src="assets/images/branding/logo.png" alt="Dream Italia UniPathways" class="h-11 w-11 rounded-full object-cover shadow-lg shadow-black/40">
         <span class="flex flex-col leading-none">
           <span class="font-display text-lg lg:text-xl font-semibold tracking-wide text-white">Dream Italia</span>
@@ -275,14 +275,14 @@
       </a>
 
       <nav class="hidden lg:flex items-center gap-10">
-        <a data-nav-link href="index.html" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">Home</a>
-        <a data-nav-link href="services.html" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">Services</a>
-        <a data-nav-link href="about.html" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">About Us</a>
-        <a data-nav-link href="contact.html" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">Contact</a>
+        <a data-nav-link href="index.php" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">Home</a>
+        <a data-nav-link href="services.php" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">Services</a>
+        <a data-nav-link href="about.php" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">About Us</a>
+        <a data-nav-link href="contact.php" class="nav-link text-sm font-medium tracking-wide text-slate-300 hover:text-white transition-colors">Contact</a>
       </nav>
 
       <div class="flex items-center gap-4">
-        <a href="contact.html" class="btn-luxury btn-shine arrow-nudge hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-900/30">
+        <a href="contact.php" class="btn-luxury btn-shine arrow-nudge hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-900/30">
           Free Assessment
         </a>
         <button id="mobile-menu-btn" aria-label="Toggle menu" class="lg:hidden flex items-center justify-center h-10 w-10 rounded-full glass text-white">
@@ -294,11 +294,11 @@
   </div>
 
   <div id="mobile-menu" class="hidden lg:hidden flex-col gap-1 glass-strong mx-4 mb-4 rounded-2xl px-6 py-6">
-    <a data-nav-link href="index.html" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">Home</a>
-    <a data-nav-link href="services.html" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">Services</a>
-    <a data-nav-link href="about.html" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">About Us</a>
-    <a data-nav-link href="contact.html" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">Contact</a>
-    <a href="contact.html" class="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-6 py-3 text-sm font-semibold text-white">Free Assessment</a>
+    <a data-nav-link href="index.php" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">Home</a>
+    <a data-nav-link href="services.php" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">Services</a>
+    <a data-nav-link href="about.php" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">About Us</a>
+    <a data-nav-link href="contact.php" class="py-3 text-base font-medium text-slate-200 border-b border-white/5">Contact</a>
+    <a href="contact.php" class="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-6 py-3 text-sm font-semibold text-white">Free Assessment</a>
   </div>
 </header>
 
@@ -332,7 +332,7 @@
       </p>
 
       <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-        <a href="contact.html" class="hero-cta btn-luxury btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-8 py-4 text-sm font-semibold text-white w-full sm:w-auto">
+        <a href="contact.php" class="hero-cta btn-luxury btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-8 py-4 text-sm font-semibold text-white w-full sm:w-auto">
           Check Eligibility
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
         </a>
@@ -772,79 +772,7 @@
             <p class="text-sm text-slate-400 mt-2">Get a personalized assessment for admission &amp; scholarship eligibility within 24 hours.</p>
           </div>
 
-          <form data-lead-form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
-            <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY">
-            <input type="hidden" name="subject" value="New Eligibility Assessment Request — Dream Italia UniPathways">
-            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
-
-            <div>
-              <label for="student_name" class="block text-xs font-medium text-slate-300 mb-2">Full Name*</label>
-              <input type="text" id="student_name" name="student_name" required placeholder="e.g. Ayesha Khan" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
-            </div>
-
-            <div>
-              <label for="phone_whatsapp" class="block text-xs font-medium text-slate-300 mb-2">WhatsApp Number*</label>
-              <input type="tel" id="phone_whatsapp" name="phone_whatsapp" required placeholder="+92 3XX XXXXXXX" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label for="qualification" class="block text-xs font-medium text-slate-300 mb-2">Current Qualification*</label>
-                <select id="qualification" name="qualification" required class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
-                  <option value="" class="bg-[#0D1420]">Select</option>
-                  <option value="Intermediate / A-Levels" class="bg-[#0D1420]">Intermediate / A-Levels</option>
-                  <option value="Bachelor's Degree" class="bg-[#0D1420]">Bachelor's Degree</option>
-                  <option value="Master's Degree" class="bg-[#0D1420]">Master's Degree</option>
-                  <option value="Other" class="bg-[#0D1420]">Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="target_degree" class="block text-xs font-medium text-slate-300 mb-2">Target Degree*</label>
-                <select id="target_degree" name="target_degree" required class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
-                  <option value="" class="bg-[#0D1420]">Select</option>
-                  <option value="Bachelor's" class="bg-[#0D1420]">Bachelor's</option>
-                  <option value="Master's" class="bg-[#0D1420]">Master's</option>
-                  <option value="PhD" class="bg-[#0D1420]">PhD</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label for="country" class="block text-xs font-medium text-slate-300 mb-2">Country*</label>
-                <select id="country" name="country" required class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
-                  <option value="" class="bg-[#0D1420]">Select</option>
-                  <option value="Pakistan" class="bg-[#0D1420]">Pakistan</option>
-                  <option value="India" class="bg-[#0D1420]">India</option>
-                  <option value="Bangladesh" class="bg-[#0D1420]">Bangladesh</option>
-                  <option value="Nepal" class="bg-[#0D1420]">Nepal</option>
-                  <option value="Sri Lanka" class="bg-[#0D1420]">Sri Lanka</option>
-                  <option value="United Arab Emirates" class="bg-[#0D1420]">United Arab Emirates</option>
-                  <option value="Saudi Arabia" class="bg-[#0D1420]">Saudi Arabia</option>
-                  <option value="Qatar" class="bg-[#0D1420]">Qatar</option>
-                  <option value="Egypt" class="bg-[#0D1420]">Egypt</option>
-                  <option value="Nigeria" class="bg-[#0D1420]">Nigeria</option>
-                  <option value="Other" class="bg-[#0D1420]">Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="city" class="block text-xs font-medium text-slate-300 mb-2">City*</label>
-                <input type="text" id="city" name="city" required placeholder="e.g. Lahore" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
-              </div>
-            </div>
-
-            <button type="submit" data-submit-btn class="btn-luxury btn-shine arrow-nudge w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 px-6 py-4 text-sm font-semibold text-white">
-              <span data-btn-label>Check My Eligibility</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </button>
-
-            <div data-form-success class="hidden rounded-xl bg-emerald-500/10 border border-emerald-500/30 px-4 py-3 text-sm text-emerald-400"></div>
-            <div data-form-error class="hidden rounded-xl bg-red-500/10 border border-red-500/30 px-4 py-3 text-sm text-red-400"></div>
-
-            <p class="text-center text-[11px] text-slate-500">
-              Prefer WhatsApp? <a href="https://wa.me/393508836325" target="_blank" rel="noopener" class="text-emerald-500 hover:underline">Chat with an advisor now</a>
-            </p>
-          </form>
+          <?php include __DIR__ . '/includes/lead-form.php'; ?>
         </div>
       </div>
     </div>
@@ -860,7 +788,7 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       <div class="lg:col-span-1">
-        <a href="index.html" class="flex items-center gap-3 mb-5">
+        <a href="index.php" class="flex items-center gap-3 mb-5">
           <img src="assets/images/branding/logo.png" alt="Dream Italia UniPathways" class="h-11 w-11 rounded-full object-cover shadow-lg shadow-black/40">
           <span class="flex flex-col leading-none">
             <span class="font-display text-lg font-semibold text-white">Dream Italia</span>
@@ -881,10 +809,10 @@
       <div>
         <h4 class="font-display text-base font-semibold text-white mb-5">Quick Links</h4>
         <ul class="space-y-3 text-sm text-slate-400">
-          <li><a href="index.html" class="hover:text-amber-500 transition-colors">Home</a></li>
-          <li><a href="services.html" class="hover:text-amber-500 transition-colors">Services &amp; Italy Guide</a></li>
-          <li><a href="about.html" class="hover:text-amber-500 transition-colors">About Us</a></li>
-          <li><a href="contact.html" class="hover:text-amber-500 transition-colors">Free Eligibility Check</a></li>
+          <li><a href="index.php" class="hover:text-amber-500 transition-colors">Home</a></li>
+          <li><a href="services.php" class="hover:text-amber-500 transition-colors">Services &amp; Italy Guide</a></li>
+          <li><a href="about.php" class="hover:text-amber-500 transition-colors">About Us</a></li>
+          <li><a href="contact.php" class="hover:text-amber-500 transition-colors">Free Eligibility Check</a></li>
         </ul>
       </div>
 

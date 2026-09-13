@@ -1,0 +1,111 @@
+<!-- ==========================================================================
+     COMPONENT: Lead Capture / Full Eligibility Evaluation Form
+     Single canonical form, included on every page that needs it via:
+       <?php include __DIR__ . '/includes/lead-form.php'; ?>
+     Web3Forms endpoint. Replace YOUR-WEB3FORMS-ACCESS-KEY with a real key.
+     ========================================================================== -->
+<form data-lead-form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+  <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY">
+  <input type="hidden" name="subject" value="New Full Eligibility Evaluation — Dream Italia UniPathways">
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div>
+      <label for="lf_first_name" class="block text-xs font-medium text-slate-300 mb-2">First Name*</label>
+      <input type="text" id="lf_first_name" name="first_name" required placeholder="e.g. Ayesha" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+    </div>
+    <div>
+      <label for="lf_last_name" class="block text-xs font-medium text-slate-300 mb-2">Last Name*</label>
+      <input type="text" id="lf_last_name" name="last_name" required placeholder="e.g. Khan" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+    </div>
+  </div>
+
+  <div>
+    <label for="lf_email" class="block text-xs font-medium text-slate-300 mb-2">Email Address*</label>
+    <input type="email" id="lf_email" name="email" required placeholder="you@example.com" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div>
+      <label for="lf_phone_whatsapp" class="block text-xs font-medium text-slate-300 mb-2">WhatsApp Number*</label>
+      <input type="tel" id="lf_phone_whatsapp" name="phone_whatsapp" required placeholder="+92 3XX XXXXXXX" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+    </div>
+    <div>
+      <label for="lf_country" class="block text-xs font-medium text-slate-300 mb-2">Country*</label>
+      <select id="lf_country" name="country" required class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+        <option value="" class="bg-[#0D1420]">Select</option>
+        <option value="Pakistan" class="bg-[#0D1420]">Pakistan</option>
+        <option value="India" class="bg-[#0D1420]">India</option>
+        <option value="Bangladesh" class="bg-[#0D1420]">Bangladesh</option>
+        <option value="Nepal" class="bg-[#0D1420]">Nepal</option>
+        <option value="Sri Lanka" class="bg-[#0D1420]">Sri Lanka</option>
+        <option value="United Arab Emirates" class="bg-[#0D1420]">United Arab Emirates</option>
+        <option value="Saudi Arabia" class="bg-[#0D1420]">Saudi Arabia</option>
+        <option value="Qatar" class="bg-[#0D1420]">Qatar</option>
+        <option value="Egypt" class="bg-[#0D1420]">Egypt</option>
+        <option value="Nigeria" class="bg-[#0D1420]">Nigeria</option>
+        <option value="Other" class="bg-[#0D1420]">Other</option>
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <label for="lf_city" class="block text-xs font-medium text-slate-300 mb-2">City*</label>
+    <input type="text" id="lf_city" name="city" required placeholder="e.g. Lahore" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div>
+      <label for="lf_qualification" class="block text-xs font-medium text-slate-300 mb-2">Current Qualification*</label>
+      <select id="lf_qualification" name="qualification" required class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+        <option value="" class="bg-[#0D1420]">Select</option>
+        <option value="Intermediate / A-Levels" class="bg-[#0D1420]">Intermediate / A-Levels</option>
+        <option value="Bachelor's Degree" class="bg-[#0D1420]">Bachelor's Degree</option>
+        <option value="Master's Degree" class="bg-[#0D1420]">Master's Degree</option>
+        <option value="Other" class="bg-[#0D1420]">Other</option>
+      </select>
+    </div>
+    <div>
+      <label for="lf_target_degree" class="block text-xs font-medium text-slate-300 mb-2">Target Degree*</label>
+      <select id="lf_target_degree" name="target_degree" required class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+        <option value="" class="bg-[#0D1420]">Select</option>
+        <option value="Bachelor's" class="bg-[#0D1420]">Bachelor's</option>
+        <option value="Master's" class="bg-[#0D1420]">Master's</option>
+        <option value="PhD" class="bg-[#0D1420]">PhD</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div>
+      <label for="lf_field_of_study" class="block text-xs font-medium text-slate-300 mb-2">Field of Study</label>
+      <input type="text" id="lf_field_of_study" name="field_of_study" placeholder="e.g. Mechanical Engineering" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+    </div>
+    <div>
+      <label for="lf_intake" class="block text-xs font-medium text-slate-300 mb-2">Preferred Intake</label>
+      <select id="lf_intake" name="preferred_intake" class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white">
+        <option value="" class="bg-[#0D1420]">Select</option>
+        <option value="Fall 2026" class="bg-[#0D1420]">Fall 2026</option>
+        <option value="Spring 2027" class="bg-[#0D1420]">Spring 2027</option>
+        <option value="Fall 2027" class="bg-[#0D1420]">Fall 2027</option>
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <label for="lf_message" class="block text-xs font-medium text-slate-300 mb-2">Additional Notes</label>
+    <textarea id="lf_message" name="message" rows="4" placeholder="Tell us anything else relevant to your application..." class="input-luxury w-full rounded-xl px-4 py-3 text-sm text-white resize-none"></textarea>
+  </div>
+
+  <button type="submit" data-submit-btn class="btn-luxury btn-shine arrow-nudge w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 px-6 py-4 text-sm font-semibold text-white">
+    <span data-btn-label>Check My Eligibility</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+  </button>
+
+  <div data-form-success class="hidden rounded-xl bg-emerald-500/10 border border-emerald-500/30 px-4 py-3 text-sm text-emerald-400"></div>
+  <div data-form-error class="hidden rounded-xl bg-red-500/10 border border-red-500/30 px-4 py-3 text-sm text-red-400"></div>
+
+  <p class="text-center text-[11px] text-slate-500">
+    Prefer WhatsApp? <a href="https://wa.me/393508836325" target="_blank" rel="noopener" class="text-emerald-500 hover:underline">Chat with an advisor now</a>
+  </p>
+</form>

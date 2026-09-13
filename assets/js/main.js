@@ -268,10 +268,10 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------------------------------------------------------------
      Active nav link highlighting
      --------------------------------------------------------------------- */
-  const currentPage = (window.location.pathname.split('/').pop() || 'index.html');
+  const currentPage = (window.location.pathname.split('/').pop() || 'index.php');
   document.querySelectorAll('[data-nav-link]').forEach((link) => {
     const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    if (href === currentPage || (currentPage === '' && href === 'index.php')) {
       link.classList.add('text-white');
       link.classList.remove('text-slate-300');
       link.setAttribute('aria-current', 'page');
